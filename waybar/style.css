@@ -1,0 +1,56 @@
+* {
+    border: none;
+    border-radius: 10px;
+ font-family: "JetBrainsMono Nerd Font", "Noto Sans CJK", sans-serif; 
+    font-size: 14px;
+    min-height: 20px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 40;
+    margin: 0;
+}
+
+#workspaces button {
+    padding: 5px;
+    margin: 3px;
+    background: transparent;
+    color: #cdd6f4;
+}
+
+#clock, #battery, #memory, #cpu, #pulseaudio {
+    padding: 5px 10px;
+    margin: 3px;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+}
+
+#custom-media {
+    padding: 5px 10px;
+    margin: 3px;
+    background: rgba(40, 40, 40, 0.8);
+    border-radius: 10px;
+}
+
+#network {
+    padding: 5px 10px;
+    margin: 3px;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    color: #a6e3a1;
+}
+
+#network.disconnected {
+    color: #f38ba8;
+}
+
+#tray {
+    padding: 5px 10px;                   /* Adds space inside the tray */
+    margin: 3px;                         /* Adds space around the tray */
+    background:  rgba(30, 30, 30, 0.8);
+      /* Black background with transparency */
+    border-radius: 10px;                 /* Rounded corners */
+}
+
