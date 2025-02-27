@@ -1,21 +1,30 @@
 return {
-	"folke/tokyonight.nvim",
-	lazy = false,
-	priority = 1000,
-	config = function()
-		require("tokyonight").setup({
-			style = "night",
-			transparent = true,
-			-- terminal_colors = true,
-			styles = {
-				sidebars = "dark",
-				floats = "dark",
-				comments = { italic = true },
-				keywords = { italic = true },
-				functions = { italic = true },
-				variables = { italic = true },
-			},
-		})
-		vim.cmd[[colorscheme tokyonight]]
-	end,
+  "uZer/pywal16.nvim",
+  lazy = false, -- Load immediately
+  priority = 1000, -- Ensure it's loaded early
+  config = function()
+    require("pywal16").setup()
+    vim.cmd[[colorscheme pywal16]]
+  end
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
