@@ -1,0 +1,19 @@
+# Pure black background
+set default-bg "#000000"
+
+# Light gray text for contrast
+set default-fg "#d0d0d0"
+
+# Highlight colors (darker shades for subtle contrast)
+set highlight-color "#333333"
+set highlight-active-color "#555555"
+
+# Enable recolor mode
+set recolor "true"
+
+# Recolor mode background (pure black)
+set recolor-lightcolor "#000000"
+
+# Recolor mode text (light gray)
+set recolor-darkcolor "#d0d0d0"
+
