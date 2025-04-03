@@ -1,0 +1,21 @@
+@define-color bg rgba(25, 28, 35, 0.8); /* Dark semi-transparent for adaptability */
+@define-color container rgba(40, 44, 52, 0.85); /* Slightly more contrast for readability */
+@define-color fg #eceff4; /* Soft off-white for text */
+@define-color fg-1 #ffffff; /* Pure white for high contrast */
+
+@define-color primary #81a1c1; /* Softer cyan, easier on the eyes */
+@define-color secondary #8fbcbb; /* Cooler green, blends well */
+@define-color accent #d08770; /* Warm orange highlight for contrast */
+
+@define-color workspace #434c5e; /* Balanced neutral for inactive elements */
+ @define-color workspace-active #88c0d0; /* Cyan highlight for active workspace */
+
+@define-color slider #5e81ac; /* Blue tint for sliders */
+@define-color slider-highlight #d8dee9; /* Light highlight for clarity */
+@define-color calendar #a3be8c; /* Muted green */
+@define-color clock #8fbcbb; /* Light teal for time elements */
+@define-color power #bf616a; /* Muted red for power options */
+
+@define-color logout #d08770; /* Soft orange */
+@define-color reboot #ebcb8b; /* Golden yellow for visibility */
+
