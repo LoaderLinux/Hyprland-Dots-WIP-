@@ -1,0 +1,90 @@
+{
+	"layer": "top",
+	"position":"left",
+	"modules-left": ["hyprland/workspaces","mpris"],
+	"modules-center": ["clock"], 
+	"margin-bottom": 16,
+	"margin-top":16,
+	"margin-left":6,
+	"modules-right": ["tray", "network", "wireplumber" ,"battery"],
+	"wireplumber": {
+		"ignored-sinks": ["Easy Effects Sink"], 
+	    "format-muted": " MT",
+	    "format": "{icon} {volume}",
+	    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol-qt",
+	    "max-volume": 100,
+	    "format-icons": ["","","", "", " "],
+	    "reverse-scrolling": true,
+	    "scroll-step": 1,
+	    "rotate":90
+	},
+	"backlight": {
+		"reverse-scrolling": false,
+		"scroll-step": 0.6,
+	    "device": "intel_backlight",
+	    "format": " {percent}",
+	    "rotate":90
+	},
+	"tray": {
+		"spacing":20,
+	},
+	"clock": {
+		"on-click": "hyprlauncher",
+        "format": "{:%H\n%M}",
+        "tooltip-format": "{:%A, %B %d, %Y (%R)}",
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"show-special":true,
+		"format-icons": {
+			"default": "󱓼",
+			"discord": "󰍩",
+			"kden": "󱛿",
+			"obs": "",
+			"spotify": "󰝚",
+			"windows": "",
+			"game": "󰮂",
+			"code":"󰨞",
+			"note":"",
+		},
+		"rotate":90,
+		"on-click": "activate",
+	},
+	"mpris": {
+		"format": "{player_icon} {title} - {artist}",
+		"format-paused": "{status_icon} {title} - {artist}",
+		"status-icons": {
+			"paused": "󰏤",
+			"playing": "󰎈"
+		},
+		"player-icons": {
+			"default": "󰎈",
+			"spotify": "󰓇",
+			"io": "󰫔",
+			"firefox": "",
+		},
+		"max-length":30,
+		"tooltip-format": "{status_icon} {title} - {artist} - {player}",
+		"rotate":90
+	},
+	"battery": {
+		"format": "{icon}  {capacity}",
+		"format-icons": ["", "", "", "", ""],
+		"format-charging": "󰢝 {capacity}",
+		"max-length": 16,
+		"rotate":90,
+		"on-click": "foot -a floatterm -e battop",
+
+	},
+	"network": {
+		"format-wifi": "󱄙",
+		"format-ethernet": "󰈀",
+		"format": "",
+		"tooltip-format": "{signaldBm}dBm {essid} {frequency}GHz",
+		"on-click": "foot -a floatterm -e nmtui connect",
+
+		"on-click-right": "nm-connection-editor",
+
+	},
+}

@@ -3,7 +3,7 @@ varying vec2 v_texcoord;
 uniform sampler2D tex;
 
 const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);  // Keeps balance of all channels
-const float VIB_VIBRANCE = 1.8;  // Increased vibrance to make it more intense
+const float VIB_VIBRANCE = 1.5;  // Increased vibrance to make it more intense
 const vec3 VIB_coeffVibrance = VIB_RGB_BALANCE * -VIB_VIBRANCE;
 
 void main() {
@@ -31,4 +31,3 @@ void main() {
 
     gl_FragColor = pixColor;
 }
-

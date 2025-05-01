@@ -1,85 +1,172 @@
-@import "color.css";
-
 * {
-    border: none;
-    border-radius: 0;
-    /* font-family: "sans", "sans-serif", "Symbols Nerd Font"; */
-    font-family: "Iosevka Nerd Font";
-    font-size: 14px;
-    min-height: 0;
-    margin-left: 4px;
-    margin-right: 4px; 
+	font-family: Fira Code Nerd Font;
+	font-size: 20px;
+	min-width: 40px;
 }
 
+@define-color background_box #1E1E1E;
+@define-color background_active_box alpha(#3A435A,0.5);
+@define-color border_active_box #3A435A;
+@define-color border_box #444444;
+@define-color default_text #DDDDDD;
+
 window#waybar {
-    border-radius: 10px;
-    background: @bg;
-    color: @fg;
+	border-radius: 8px;
+	background-color: #101010;
+	border: 2px solid @border_box;
+	margin: -4px -8px -8px -8px;
 }
 
 tooltip {
-    background: @bg;
-    border-radius: 0px;
+	background: #2A2A2A;
+	border: 2px solid @border_box;
+	border-radius: 6px;
+}
+tooltip label {
+	font-family: Source Code Pro;
+	font-size: 18px;
+	color: @default_text;
+}
+
+#tray {
+	background-color: transparent;
+	border: none;
+	padding-bottom: 16px;
+}
+
+#tray > .tray-icon {
+	padding: 4px;
+	margin: 2px;
+	border: 1px solid @border_box;
+	border-radius: 4px;
+	background-color: @background_box;
+}
+
+/* Group Right 1 */
+#network {
+	background-color: @background_box;
+	border: 1px solid @border_box;
+	border-radius: 6px;
+	min-height: 40px;
+	margin-left: 6px;
+	margin-right: 6px;
+	margin-bottom: 4px;
+	padding-right: 4px;
+	color: @default_text;
+}
+
+#battery {
+	border: 1px solid @border_box;
+	background-color: @background_box;
+	border-top: 0px transparent;
+	border-radius: 0px 0px 6px 6px;
+	min-height: 80px;
+	margin-bottom: 6px;
+	padding-top: 6px;
+	margin-left: 6px;
+	margin-right: 6px;
+	padding-bottom: 6px;
+	color: @default_text;
+}
+
+#battery.charging {
+	background: linear-gradient(180deg, @background_box 0%, @background_active_box 60%);
+}
+
+#wireplumber {
+	border: 1px solid @border_box;
+	background-color: @background_box;
+	border-radius: 6px 6px 0px 0px;
+	border-bottom: 0px transparent;
+	min-height: 80px;
+	margin-left: 6px;
+	margin-right: 6px;
+	padding-top: 6px;
+	color: @default_text;
+}
+
+#backlight {
+	border: 1px solid @border_box;
+	background-color: @background_box;
+	border-radius: 0px;
+	border-top: 0px transparent;
+	border-bottom: 0px transparent;
+	padding-bottom: 3px;
+	margin-left: 6px;
+	padding-top: 3px;
+	margin-right: 6px;
+	color: @default_text;
+}
+
+/* Group Top */
+
+#clock {
+	border: 0.1rem solid @border_box;
+	background-color: @background_box;
+	min-height: 60px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	margin-right: 6px;
+	margin-left: 6px;
+	border-radius: 6px;
+	color: @default_text;
+	transition: 0.4s;
+}
+
+#clock:hover {
+	background-color: @background_active_box;
+	border: 0.2rem solid @border_active_box;
+}
+
+#mpris {
+	border: 1px solid @border_box;
+	background-color: @background_box;
+	border-radius: 6px;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 10px;
+	margin-left: 6px;
+	margin-right: 6px;
+	color: alpha(@default_text, 0.6);
+	transition: 0.4s;
+}
+
+#mpris.playing {
+	background-color: @background_active_box;
+	border: 2px solid @border_active_box;
+	color: @default_text;
+}
+
+#workspaces {
+	background-color: @background_box;
+	border: 1px solid @border_box;
+	margin-left: 6px;
+	margin-right: 6px;
+	margin-top: 6px;
+	padding-top: 8px;
+	margin-bottom: 6px;
+	font-size: 18px;
+	padding-bottom: 6px;
+	border-radius: 6px;
 }
 
 #workspaces button {
-    padding: 3px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-bottom: 1px solid @bg;
-}
-
-/* #workspaces button:nth-child(1) {color: @red;} */
-/* #workspaces button:nth-child(2) {color: @blue;} */
-/* #workspaces button:nth-child(3) {color: @yellow;} */
-/* #workspaces button:nth-child(4) {color: @green;} */
-/* #workspaces button:nth-child(5) {color: @magenta;} */
-/* #workspaces button:nth-child(6) {color: @cyan;} */
-/* #workspaces button:nth-child(7) {color: @red;} */
-/* #workspaces button:nth-child(8) {color: @green;} */
-/* #workspaces button:nth-child(9) {color: @yellow;} */
-/* #workspaces button:nth-child(10) {color: @blue;} */
-
-#workspaces button.active {
-    color: @fg;
-}
-
-#workspaces button.empty {
-    color: @bg2;
-}
-
-#workspaces button.focused {
-    background: transparent;
-    border-bottom: 1px solid @fg;
-}
-
-#workspaces button.urgent {
-    color: @red;
-    background: @bg;
+	margin-left: -33px;
+	margin-right: -30px;
+	border-radius: 0px;
+	color: alpha(@default_text, 0.2);
+	transition-delay: 0s;
+	transition: 0.4s;
 }
 
 #workspaces button:hover {
-    background: @bg;
-    color: @gray;
-    box-shadow: inherit;
-    text-shadow: inherit;
+	color: rgba(255, 255, 255, 0.5);
+	background: alpha(@background_box, 0);
+	text-shadow: 2px 2px @border_active_box;
 }
 
-#window,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#workspaces,
-#tray,
-#backlight,
-#custom-spotify,
-#custom-cava_mviz
-{
-    padding: 5px 5px;
-}
-
-#pulseaudio {
-  color: @fg;
+#workspaces button.active {
+	color: alpha(@default_text, 0.7);
+	text-shadow: 3px 3px @border_active_box;
 }
 
